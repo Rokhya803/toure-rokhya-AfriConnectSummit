@@ -10,11 +10,12 @@
       rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 </head>
-<body>
+<body>²
     <!-- Barre de navigation -->
     <header>
         <nav class="navbar">
             <h2 class="logo">AfriConnect Summit 2026</h2>
+            <div class="linknav">
          <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="programme.html">Programme</a></li>
@@ -24,104 +25,146 @@
          <button class="menu-btn">
             <i class="fa-solid fa-bars"></i>
          </button>
+         </div>
         </nav>
     </header>
-    <!-- Section d'accueil -->
+    
     <main>
+         <!-- Section Hero -->
         <section class="hero">
-            <div>
-                <p>Edition 2026</p>
-                <h1>Le plus grand sommet techonologique d'Afrique francophone</h1>
-                <p>
-                    Découvrez les innovations, échangez avec les experts, participez aux conférences et développez votre réseau professionnel.
-                </p>
-                <div class="event-info">
-                    <p>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        15 - 17 juin 2026
+
+            <!-- Contenu principal -->
+            <div class="hero-container">
+
+                <!-- Texte -->
+                <div class="hero-content">
+
+                    <p class="edition">Édition 2026</p>
+
+                    <h1>
+                        Le plus grand sommet technologique d'Afrique francophone
+                    </h1>
+
+                    <p class="hero-description">
+                        Découvrez les innovations, échangez avec les experts,
+                        participez aux conférences et développez votre réseau
+                        professionnel.
                     </p>
-                    <P>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Dakar, Sénégal
-                    </P>
+
+                    <div class="event-info">
+                        <p>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            20 - 22 novembre 2026
+                        </p>
+                        <p> <i class="fa-solid fa-location-dot"></i>
+                        Dakar, Sénégal</p>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="programme.html" class="btn">
+                            Voir le programme
+                        </a>
+
+                        <a href="contact.html" class="btn btn-secondary">
+                            Participer au sommet
+                        </a>
+                    </div>
+
                 </div>
-                <a href="programme.html" class="btn">Voir le programme</a>
-                <a href="contact.html" class="btn">Participer au sommet</a>
-                 
+
+                <!-- Image -->
+                <div class="hero-image">
+                    <img src="images/img14.jpeg" alt="Sommet technologique 2026">
+                </div>
+
             </div>
-            <div>
+
+            <!-- Compte à rebours -->
+            <div class="countdown">
+
                 <h2>Début de la conférence dans :</h2>
-                <div>
-                <div>
-                    <span id="days">00</span>
-                    <p>Jours</p>
+
+                <div class="countdown-grid">
+
+                    <div class="countdown-card">
+                        <span>00</span>
+                        <p>Jours</p>
+                    </div>
+
+                    <div class="countdown-card">
+                        <span>00</span>
+                        <p>Heures</p>
+                    </div>
+
+                    <div class="countdown-card">
+                        <span>00</span>
+                        <p>Minutes</p>
+                    </div>
+
+                    <div class="countdown-card">
+                        <span>00</span>
+                        <p>Secondes</p>
+                    </div>
+
                 </div>
-                <div>
-                    <span id="hours">00</span>
-                    <p>Heures</p>
-                </div>
-                <div>
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
-                <div>
-                    <span id="seconds">00</span>
-                    <p>Secondes</p>
-                </div>
-                </div>
+
             </div>
+
         </section>
+            
         <!-- Chiffre clé -->
          <section class="chiffre">
             <h2>AfriConnect en chiffres</h2>
-            <div>
-                <article>
-                    <i class="fa-solid-users"></i>
-                    <h3>0</h3>
+            <div class="chiffre-grid">
+                <article class="chiffre-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>+1200</h3>
                     <p>Participants</p>
                 </article>
-                <article>
+                <article  class="chiffre-card">
                  <i class="fa-solid fa-microphone"></i>
-                 <h3>0</h3>
+                 <h3>48</h3>
                 <p>Intervenants</p>
              </article>
-             <article>
+             <article  class="chiffre-card">
                 <i class="fa-solid fa-calendar-days"></i>
-                <h3>0</h3>
+                <h3>3</h3>
                 <p>Jours</p>
             </article>
-            <article>
+            <article class="chiffre-card">
                 <i class="fa-solid fa-earth-africa"></i>
-                <h3>0</3>
+                <h3>12</h3>
                  <p>Pays représentés</p>
             </article>
             </div>
          </section>   
     </main>
     <!-- Pourquoi participer -->
-    <section>
+    <section id="pourquoi">
+        <h2>Pourquoi Participer?</h2>
             <div class="cards">
-                <article>
+                <article class="cards-grid">
                     <i class="fa-solid fa-lightbulb"></i>
                      <h3>Innovation</h3>
                     <p>
                         Découvrir les solutions techonologiques qui transforment le continent.
                     </p>
                     </article>
+                    <article class="cards-grid">
                     <i class="fa-solid fa-users"></i>
                     <h3>Networking</h3>
                     <p>
                         Echanger avec des professionnels et créer de nouvelles collaborations.
                     </p>
                 </article>
-                <article>
+                <article class="cards-grid">
                     <i class="fa-solid fa-rocket"></i>
                     <h3>Opportunités</h3>
                     <p>
                         Développer des projets et valoriser les talents africains.
                     </p>
                 </article>
-                <article>
+                <article class="cards-grid">
                     <i class="fa-solid fa-laptop-code"></i>
                     <h3>Apprendre</h3>
                     <p>Découvrez les derniéres innovations en intelligence artificielle, développement web, cybersécurité, cloud computing et data science .</p>
@@ -129,87 +172,164 @@
             </div>  
       </section>
       <!-- INTERVENANTS -->
-       <section>
+       <section id="intervenant">
         <h2>INTERVENANTS VEDETTES</h2>
-        <div>
+        <div class="img-grid">
+            <div class="img-card">
+            <img src="images/img3.jpg" alt="3">
             <h3>Rokhayaa Toure</h3>
             <p>Experte IA</p>
             <span>Sénégal</span>
         </div>
-        <div>
+        <div class="img-card">
+            <img src="images/img1.jpg" alt="1">
             <h3>David Mensah</h3>
              <p>CEO TechNova</p>
               <span>Ghana</span>
         </div>
-        <div>
+        <div class="img-card">
+            <img src="images/img13.jpg" alt="13">
             <h3>Grace Niyonsaba</h3>
             <p>UX Designer</p>
              <span>Rwanda</span>
         </div>
-        <div>
+        <div class="img-card">
+            <img src="images/img12.jpg" alt="12">
             <h3>Youssef Karim</h3>
              <p>Data Scientist</p>
               <span>Maroc</span>
         </div>
+        </div>
       </section>
-      <p>
-        <a href="intervenants.html" class=btn-more>Voir tous les intervenants</a>
+      <p class="inter">
+        <a href="intervenants.html" class="btn-more">Voir tous les intervenants</a>
       </p>
+
       <!-- SPONSORS -->
-       <section>
+       <section class="Sponsor">
         <h2>NOS SPONSORS</h2>
-        <div>
+        <div class="rt">
+        <div class="or">
          <h3>Sponsors Or</h3>
          <ul>
-            <li>Orange Afrique</li>
-            <li>Wave</li>
-            <li>Google Africa</li>
+            <li>
+            <img src="images/img17.jpg" alt="17">
+           <p> Orange Afrique</p>
+            </li>
+            <li>
+            <img src="images/img15.jpg" alt="15">
+           <p> Wave</p>
+            </li>
+            <li>
+            <img src="images/img20.jpg" alt="20">
+            <p>Microsoft</p>
+            </li>
+            <li>
+                <img src="images/img25.jpg" alt="">
+                <p>TotalEnergies</p>
+            </li>
          </ul>
         </div>
-        <div>
-         <h3>Sponsors Argent</h3>
+        <div class="argent">
+         <h3>Sponsors argent</h3>
          <ul>
-            <li>Ecobank</li>
-            <li>MTN</li>
-            <li>Sonatel</li>
+            <li>
+            <img src="images/img18.jpg" alt="18">
+           <p> Ecobank</p>
+            </li>
+            <li>
+                <img src="images/img26.jpg" alt="26">
+                <p>TapTapSend</p>
+            </li>
+            <li>
+            <img src="images/img19.jpg" alt="19">
+           <p> MTN</p>
+            </li>
+            
+            <li>
+            <img src="images/img16.jpg" alt="16">
+            <p>Sonatel</p>
+            </li> 
          </ul>
         </div>
-        <div>
+        <div class="bronze">
         <h3>Sponsors Bronze</h3>
         <ul>
-            <li>Startup Dakar</li>
-            <li>Afrilab</li>
-            <li>Tech Hub</li>
+            <li>
+            <img src="images/img22.jpg" alt="23">
+           <p>Startup Dakar</p>
+            </li>
+    
+            <li>
+            <img src="images/img23.jpg" alt="23">
+            <p>Simplon Senegal</p>
+            </li>
+            <li>
+            <img src="images/img21.jpg" alt="21">
+            <p>Tech Hub</p>
+            </li> 
+            <li>
+                <img src="images/img24.jpg" alt="24">
+                <p>DigitalAfrica</p>
+            </li>
         </ul>
      </div>
+     </div>
     </section>
-    <!-- FOOTER -->
-     <footer>
-    <section>
-        <div>
-            <h3>AfriConnect Summit</h3>
-            <p>La plus grande conférence technologie panaafricaine.</p>
-        </div>
-        <div>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="programme.html">Programme</a></li>
-            <li><a href="intervenants.html">Intervenants</a></li>
-            <li><a href="contact.html">Contact</a></li>
-         </ul>  
-        </div>
-         <div>
-            <h3>Suivez-Nous</h3>
-            <a href="https://Snapchat"><i class="fa-brands fa-instagram fa-xl fs-2" style="color: rgb(206, 180, 180);"></i></a>
-            <a href="https://Tiktok"><i class="fa-brands fa-tiktok fa-xl fs-2" style="color: rgb(206, 180, 180);"></i></a>
-            <a href="https://Youtube"><i class="fa-brands fa-youtube fa-xl fs-2" style="color: rgb(206, 180, 180);"></i></a>
-      </div>
-      <div class="copyright">    
-              <p class="text-light"> &copy; 2026 AfriConnect Summit_Tous droits réservés</p>
-         </div>
-         <a href="#">Retour en haut</a>
-         </footer>
-     </section>
-      <script src="js/main.js"></script>
+
+    <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- Colonne 1 -->
+                <div class="footer-column">
+                    <h3>AfriConnect Summit</h3>
+                    <p>
+                        La plus grande conférence technologique panafricaine.
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Dakar, Sénégal
+
+                    </p>
+                </div>
+
+                <!-- Colonne 2 -->
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 -->
+                <div class="footer-column">
+                    <h3>Suivez-nous</h3>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AfriConnect Summit - Tous droits réservés.</p>
+
+                <a href="#">Retour en haut ↑</a>
+            </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
