@@ -74,9 +74,12 @@ main{
 }
 .menu-btn{
     display: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
     width: 90%;
@@ -178,7 +181,7 @@ main{
     box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
-/* ================= COMPTE À REBOURS ================= */
+ /* COMPTE À REBOURS  */
 
 .countdown{
     margin-top: 70px;
@@ -509,7 +512,7 @@ main{
     border-radius: 40px;
 }
 
-/* ================= FOOTER ================= */
+ /* FOOTER  */
 
 .footer{
     background: #0B1F4D;
@@ -1144,3 +1147,320 @@ iframe{
     background: #0b1f3a;
     transform: translateY(-3px);
 }
+
+/* RESPONSIVE MOBILE (375px à 768px) */
+@media screen and (max-width:768px){
+
+/* Navbar */
+
+.navbar{
+    flex-direction:column;
+    padding:15px 20px;
+
+}
+
+.logo{
+    font-size:24px;
+    text-align:center;
+
+}
+
+.linknav ul{
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+
+}
+.menu-btn{
+        display: block;
+
+    }
+    .navbar{
+        flex-wrap: wrap;
+
+    }
+
+    .linknav{
+        display: none;
+        width: 100%;
+
+    }
+
+    .linknav.active{
+        display: block;
+
+    }
+
+    .linknav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+    }
+/* Hero */
+.hero{
+    width:95%;
+
+}
+
+.hero-container{
+    flex-direction:column;
+
+}
+
+.hero-content,
+.hero-image{
+    width:100%;
+    text-align:center;
+
+}
+
+.hero-content h1{
+    font-size:2.3rem;
+
+}
+
+.hero-description{
+    font-size:1.1rem;
+
+}
+
+.hero-buttons{
+    flex-direction:column;
+
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+
+}
+
+.hero-image img{
+    width:100%;
+}
+/* Compteur */
+
+.countdown-grid{
+    flex-wrap:wrap;
+
+}
+
+.countdown-card{
+    width:45%;
+
+}
+
+/* Chiffres */
+.chiffre-grid{
+    grid-template-columns:1fr;
+
+}
+
+/* Pourquoi participer */
+.cards{
+    grid-template-columns:1fr;
+
+}
+
+/* Intervenants Accueil */
+.img-grid{
+    grid-template-columns:1fr;
+
+}
+
+/* Sponsors */
+
+.or ul,
+.argent ul,
+.bronze ul{
+    flex-direction:column;
+    gap:25px;
+
+}
+/* Page Intervenants */
+
+.interv{
+    height:auto;
+    padding:120px 20px 50px;
+
+}
+
+.interv p{
+    padding:0;
+    font-size:18px;
+
+}
+
+select{
+    width:90%;
+    margin:25px auto;
+    display:block;
+
+}
+
+.fa-grid{
+    grid-template-columns:1fr;
+
+}
+
+.fa-card img{
+
+    height:320px;
+
+}
+
+/* Programme */
+.tabs{
+    flex-wrap:wrap;
+
+}
+
+.jeu-kya{
+
+    grid-template-columns:1fr;
+
+}
+
+.sy{
+    overflow-x:auto;
+
+}
+
+/* Contact */
+
+.contact-container{
+    grid-template-columns:1fr;
+
+}
+
+.amina{
+    margin-bottom:20px;
+
+}
+
+.contact-form{
+    padding:25px;
+
+}
+
+/* Footer */
+
+.footer-container{
+    flex-direction:column;
+
+}
+
+.footer-bottom{
+    flex-direction:column;
+    text-align:center;
+
+}
+
+}
+   /* RESPONSIVE TABLETTE(768px à 992px) */
+
+@media screen and (min-width:768px) and (max-width:992px){
+
+    .navbar{
+        padding:20px 30px;
+        flex-wrap:wrap;
+
+    }
+
+    .logo{
+        font-size:28px;
+
+    }
+
+    .linknav ul{
+        gap:20px;
+
+    }
+
+    .linknav ul li a{
+        font-size:18px;
+
+    }
+
+    .hero{
+        width:95%;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+
+    }
+
+    .hero-description{
+        font-size:1.2rem;
+    }
+
+    .hero-image img{
+
+        width:100%;
+
+    }
+
+    .countdown-grid{
+
+        flex-wrap:wrap;
+
+    }
+
+    .chiffre-grid{
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .img-grid{
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .fa-grid{
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .jeu-kya{
+        grid-template-columns:repeat(2,1fr);
+
+    }
+    .contact-container{
+        grid-template-columns:1fr;
+
+    }
+    .or ul,
+    .argent ul,
+
+    .bronze ul{
+        gap:30px;
+        flex-wrap:wrap;
+
+    }
+
+    .footer-container{
+        gap:30px;
+
+    }
+
+    .footer-column{
+        min-width:250px;
+
+    }
+
+    .sy{
+        overflow-x:auto;
+    }  
+ 
+}
+   
+    
