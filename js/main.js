@@ -222,3 +222,274 @@ if(filtre){
     });
 
 }
+
+// Navbar Dynamique
+ const navbar = document.querySelector(".navbar");
+ window.addEventListener("scroll", () =>{
+
+if(window.scrollY > 80){
+    navbar.classList.add("scrolled");
+}else{
+    navbar.classList.remove("scrolled");
+}
+});
+
+// ANIMATIONS AU SCROLL
+
+const elements = document.querySelectorAll(
+
+    ".fade-in, .slide-left, .slide-right, .zoom-in"
+
+);
+
+const animationObserver = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+            animationObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+
+    threshold:0.2
+
+});
+
+elements.forEach(element => {
+
+    animationObserver.observe(element);
+
+});
+
+
+// VALIDATION FORMULAIRE CONTACT
+
+const formContact = document.querySelector(".contact-form");
+
+if(formContact){
+
+    formContact.addEventListener("submit", (e)=>{
+
+        e.preventDefault();
+
+        const nom = document.querySelector("#nom");
+        const email = document.querySelector("#email");
+        const telephone = document.querySelector("#telephone");
+        const participation = document.querySelector("#participation");
+        const pays = document.querySelector("#pays");
+        const message = document.querySelector("#message");
+
+        let valide = true;
+
+
+        // Nom
+        if(nom.value.trim() === ""){
+            afficherErreur(nom, "Le nom est obligatoire");
+            valide = false;
+        }else{
+            supprimerErreur(nom);
+        }
+
+
+        // Email
+        if(email.value.trim() === "" || !email.value.includes("@")){
+            afficherErreur(email, "Email invalide");
+            valide = false;
+        }else{
+            supprimerErreur(email);
+        }
+
+
+        // Téléphone
+        if(telephone.value.trim().length !== 8 || isNaN(telephone.value)){
+            afficherErreur(telephone, "Le téléphone doit contenir 9 caractères");
+            valide = false;
+        }else{
+            supprimerErreur(telephone);
+        }
+
+
+        // Type participation
+        if(participation.value === ""){
+            afficherErreur(participation, "Choisissez un type de participation");
+            valide = false;
+        }else{
+            supprimerErreur(participation);
+        }
+
+
+        // Pays
+        if(pays.value === ""){
+            afficherErreur(pays, "Sélectionnez un pays");
+            valide = false;
+        }else{
+            supprimerErreur(pays);
+        }
+
+
+        // Motivation
+        if(message.value.trim().length < 20){
+            afficherErreur(message, "La motivation doit contenir minimum 20 caractères");
+            valide = false;
+        }else{
+            supprimerErreur(message);
+        }
+
+
+        // Succès
+        if(valide){
+
+            alert("Merci ! Votre inscription a été envoyée avec succès !");
+
+            formContact.reset();
+
+        }
+
+    });
+
+}
+
+
+// Afficher les erreurs
+
+function afficherErreur(champ, texte){
+
+    champ.style.border = "2px solid red";
+
+    let erreur = champ.parentElement.querySelector(".erreur");
+
+    if(!erreur){
+
+        erreur = document.createElement("small");
+        erreur.classList.add("erreur");
+        champ.parentElement.appendChild(erreur);
+
+    }
+
+    erreur.textContent = texte;
+    erreur.style.color = "red";
+
+}
+
+
+// Supprimer les erreurs
+
+function supprimerErreur(champ){
+
+    champ.style.border = "";
+
+    const erreur = champ.parentElement.querySelector(".erreur");
+
+    if(erreur){
+        erreur.remove();
+    }
+
+}
+
+// VALIDATION DU FORMULAIRE
+
+const form = document.querySelector(".contact-form");
+
+if(form){
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const nom = document.getElementById("nom");
+        const email = document.getElementById("email");
+        const telephone = document.getElementById("telephone");
+        const participation = document.getElementById("participation");
+        const message = document.getElementById("message");
+
+        let valide = true;
+
+        // Réinitialiser les bordures
+        [nom, email, telephone, participation, message].forEach(champ=>{
+            champ.style.border = "1px solid #ddd";
+        });
+
+        if(nom.value.trim() === ""){
+            nom.style.border = "2px solid red";
+            valide = false;
+        }
+
+        if(!email.value.includes("@")){
+            email.style.border = "2px solid red";
+            valide = false;
+        }
+
+        if(telephone.value.trim().length < 9){
+            telephone.style.border = "2px solid red";
+            valide = false;
+        }
+
+        if(participation.value === "Choisir"){
+            participation.style.border = "2px solid red";
+            valide = false;
+        }
+
+        if(message.value.trim().length < 20){
+            message.style.border = "2px solid red";
+            valide = false;
+        }
+
+        if(valide){
+            alert("Inscription envoyée avec succès !");
+            form.reset();
+        }
+
+    });
+
+}
+
+
+
+// ANNÉE DYNAMIQUE
+
+const annee = document.getElementById("annee");
+
+if(annee){
+    annee.textContent = new Date().getFullYear();
+}
+
+
+// Bouton en retour en haut
+const btnTop = document.getElementById("btn-top")
+
+if(btnTop){
+
+    btnTop.style.display ="none"
+
+    window.addEventListener("scroll", ()  => {
+
+        if(window.scrollY > 300){
+
+            btnTop.style.display = "flex"
+
+        }else{
+
+            btnTop.style.display = "none";
+
+
+        }
+    });
+    btnTop.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        Window.scrolledTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    });
+}

@@ -20,6 +20,7 @@
     align-items: center;
     background: linear-gradient(90deg,#071633,#0B1F4D,#123A8B);
     box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    z-index: 1000;
 }
 
 .logo{
@@ -477,92 +478,114 @@ main{
 }
 
 /* Section Sponsor */
+
 .Sponsor{
-    padding: 5rem 2rem;
-}
-.Sponsor h2{
-    text-align: center;
-    margin-bottom: 3rem;
-}
-.sponsors{
-    padding: 80px 2%;
+    padding: 80px 8%;
+    background: #f8f9fc;
 }
 
-.sponsors{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 50px;
-}
-.lo{
+.Sponsors h2{
     text-align: center;
-    margin-bottom: 100px;
+    font-size: 2.8rem;
+    color: var(--bleu);
+    margin-bottom: 60px;
 }
+
+/* Chaque catégorie */
+.or,
+.argent,
+.bronze{
+    background: #fff;
+    border-radius: 25px;
+    padding: 35px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    border: none;
+}
+
 .or h3,
 .argent h3,
 .bronze h3{
     text-align: center;
     color: var(--bleu);
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin-bottom: 35px;
+    font-size: 30px;
 }
+
+/* Logos */
 .or ul,
 .argent ul,
 .bronze ul{
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15rem;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0;
 }
+
 .or li,
 .argent li,
 .bronze li{
-    text-align: center;
-    margin-bottom: 35px;
-}
-.or img,
-.argent img,
-.bronze img{
-    display: block;
-    margin: auto;
-    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 20px;
     transition: .3s;
-    border-radius: 30%;
 }
 
-.or img:hover,
-.argent img:hover,
-.bronze img:hover{
-    transform: scale(1.1);
+.or li:hover,
+.argent li:hover,
+.bronze li:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
 }
+
+/* Sponsors OR */
+.or li{
+    width: 240px;
+    padding: 30px;
+}
+
 .or img{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
 }
+
+/* Sponsors ARGENT */
+.argent li{
+    width: 190px;
+    padding: 25px;
+}
+
 .argent img{
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
 }
+
+/* Sponsors BRONZE */
+.bronze li{
+    width: 160px;
+    padding: 20px;
+}
+
 .bronze img{
     width: 90px;
     height: 90px;
+    object-fit: contain;
 }
 
 .or p,
 .argent p,
 .bronze p{
-    margin-top: 12px;
+    margin-top: 18px;
     font-size: 18px;
     font-weight: 600;
-    color: var(--noir);
-
-}
-.or,
-.argent,
-.bronze{margin-bottom: 50px;
-    border: 2px solid var(--noir);
-    border-radius: 40px;
+    text-align: center;
 }
 
  /* FOOTER  */
@@ -1011,10 +1034,12 @@ iframe{
     padding: 120px 5% 60px;
     color: white;
 
+
 }
 .ariane{
     max-width: 1200px;
-    margin: auto;
+    margin:0 auto;
+    text-align: center;
 
 }
 
@@ -1023,6 +1048,7 @@ iframe{
     gap: 10px;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: center;
 
 }
 
@@ -1032,6 +1058,10 @@ iframe{
     text-decoration: none;
     font-size: 18px;
 
+}
+.lo{
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .fil span{
@@ -1678,4 +1708,79 @@ select{
 .dark-mode .footer{
 
     background: #020617;
+}
+.navbar.scrolled{
+    background: #071633;
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+    transition: .3s ease;
+}
+.navbar.scrolled{
+    background: rgba(7,22,51,.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+/* Etat initial */
+.fade-in,
+.slide-left,
+.slide-right,
+.zoom-in{
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+/* Fade */
+.fade-in{
+    transform: translateY(40px);
+}
+
+/* Slide gauche */
+.slide-left{
+    transform: translateX(-60px);
+
+}
+
+/* Slide droite */
+.slide-right{
+    transform: translateX(60px);
+
+}
+
+/* Zoom */
+.zoom-in{
+    transform: scale(.8);
+}
+
+/* Quand l'élément apparaît */
+
+.show{
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+}
+
+#btn-top{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--bleu);
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: 22px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    cursor: pointer;
+    transition: .3s;
+    z-index: 1000;
+}
+.btn-top:hover{
+    transform: translateY(-5px);
+}
+
+.fil a,
+.fil span{
+    font-size: 18px;
+    text-align: center;
 }
