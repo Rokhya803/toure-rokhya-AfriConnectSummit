@@ -587,6 +587,30 @@ main{
     font-weight: 600;
     text-align: center;
 }
+/* Sponsors */
+
+.dark-mode .Sponsor{
+    background: #071633;
+}
+
+.dark-mode .or,
+.dark-mode .argent,
+.dark-mode .bronze{
+    background: #0B1F4D;
+    border: 1px solid #4a83da;
+}
+
+.dark-mode .or li,
+.dark-mode .argent li,
+.dark-mode .bronze li{
+    background: #071633;
+}
+
+.dark-mode .or p,
+.dark-mode .argent p,
+.dark-mode .bronze p{
+    color: white;
+}
 
  /* FOOTER  */
 
